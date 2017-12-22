@@ -23,10 +23,10 @@ gem 'coffee-rails', '~> 4.2'
 gem "font-awesome-rails"
 gem 'materialize-sass'
 gem 'bootstrap-sass', '3.3.6'
-gem 'bcrypt',         '3.1.11'
-gem 'faker',          '1.6.6'
-gem 'carrierwave',             '0.11.2'
-gem 'mini_magick',             '4.5.1'
+gem 'bcrypt', '3.1.11'
+gem 'faker', '1.6.6'
+gem 'carrierwave', '0.11.2'
+gem 'mini_magick', '4.5.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -63,3 +63,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'omniauth'
+gem 'devise'
+gem 'omniauth-facebook'
