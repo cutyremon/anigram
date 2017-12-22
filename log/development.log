@@ -8066,3 +8066,26 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 299ms (Views: 297.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2017-12-23 01:54:10 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/Desktop/anigram/app/controllers/application_controller.rb:2)
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"users"}
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_rails_default.html.erb (731.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 1220ms (Views: 746.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 01:54:29 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_rails_default.html.erb (287.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 298ms (Views: 297.2ms | ActiveRecord: 0.0ms)
+
+

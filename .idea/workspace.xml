@@ -4,7 +4,6 @@
     <list default="true" id="1dd20530-2a47-4da5-9937-3070eee1c2d4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -301,12 +300,12 @@
       <updated>1513931434354</updated>
       <workItem from="1513931441049" duration="1624000" />
       <workItem from="1513958859443" duration="8063000" />
-      <workItem from="1513968467849" duration="254000" />
+      <workItem from="1513968467849" duration="428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9941000" />
+    <option name="totallyTimeSpent" value="10115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
