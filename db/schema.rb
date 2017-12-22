@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608075862) do
+ActiveRecord::Schema.define(version: 20171222084806) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(version: 20170608075862) do
     t.string   "remember_digest"
     t.boolean  "admin"
     t.string   "avatar",          default: "/assets/images/fallback/ava-default-male.jpg"
+    t.string   "provider"
+    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 

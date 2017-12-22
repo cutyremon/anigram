@@ -20,4 +20,5 @@ Rails.application.routes.draw do
 	resources :users
 	resources :microposts,		only: [:create, :destroy, :show]
 	resources :relationships,	only: [:create, :destroy]
+	devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 end
