@@ -66,3 +66,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'omniauth'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'rails-i18n', '~> 5.0.0'

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  scope '(:locale)' do
+  # root 'static_pages#home'
+  scope "(:locale)", locale: /en|nh/ do
     root 'static_pages#home'
     get '/signup', to: 'users#new'
     post '/signup', to: 'users#create' # named routes

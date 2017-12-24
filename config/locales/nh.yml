@@ -19,11 +19,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  about: "about"
-  sign_in: "sign in"
-  portfolio: "portfolio"
-#   application:
-#    about: "about1"
-#    sign_in: "sign in"
-#    portfolio: "portfolio"
+nh:
+
+#    application:
+#      about: "about2"
+##      sign_in: "sign in2"
+##      portfolio: "portfolio22"
+  about: "demo"
