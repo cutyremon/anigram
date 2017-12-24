@@ -36,7 +36,8 @@
 				<%= notification.notifi_type %>ed on your post
 			</div>
 			<div class="notifi-time">
-				<%= time_ago_in_words(notification.created_at) %>
+				<!--<%= time_ago_in_words(notification.created_at) %>-->
+        <%= notification.created_at%>
 			</div>
 		<% end %>
 	</li>
