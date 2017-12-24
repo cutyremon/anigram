@@ -23,7 +23,11 @@ en:
   about: "about"
   sign_in: "sign in"
   portfolio: "portfolio"
-#   application:
-#    about: "about1"
-#    sign_in: "sign in"
-#    portfolio: "portfolio"
+  Settings: " Settings"
+  Log out: " log out"
+  view all: "view all"
+  AniGram: "AniGram"
+  Search: "Search..."
+  Delete comment:
+  Reply:
+  Add a comment:

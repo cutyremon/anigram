@@ -20,9 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 nh:
-
-#    application:
-#      about: "about2"
-##      sign_in: "sign in2"
-##      portfolio: "portfolio22"
-  about: "demo"
+  about: "about1"
+  sign_in: "sign in1"
+  portfolio: "portfolio1"
+  Settings: " Settings1"
+  Log out: " log out1"
+  AniGram: "AniGram"
+  Search: "砂浜..."

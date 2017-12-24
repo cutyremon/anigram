@@ -1,11 +1,12 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo"><%= fa_icon "instagram" %> | AniGram</a>
+    <a href="/" class="brand-logo"><%= fa_icon "instagram" %> |
+      <% t("AniGram") %></a>
     <a style="margin-left: 193px;"><%= link_to "English", locale: "en" %></a>
     <a><%= link_to "日本語", locale: "nh" %></a>
     <% if logged_in? %>
       <%= form_tag users_path, method: "get", class: "users-search" do %>
-        <%= text_field_tag :search, params[:search], class: "search-box", placeholder: "Search..." %>
+        <%= text_field_tag :search, params[:search], class: "search-box", placeholder: t("Search") %>
       <% end %>
     <% end %>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -28,7 +29,7 @@
             <li>Notifications</li>
             <%= render current_user.notifications.order('id DESC').first(3) %>
             <li>
-              <%= link_to "View All", notifications_path %>
+              <%= link_to t("view all"), notifications_path %>
             </li>
           </ul>
         </li>
@@ -42,8 +43,8 @@
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <li><%= link_to t("Settings"), edit_user_path(current_user) %></li>
+            <li><%= link_to t("Log out"), logout_path, method: "delete" %></li>
           </ul>
         </li>
       <% else %>
