@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   # root 'static_pages#home'
   scope "(:locale)", locale: /en|nh/ do
+    get '/admin', to: 'admin#index'
     root 'static_pages#home'
     # get 'index',to: 'static_pages#home'
     get '/signup', to: 'users#new'
