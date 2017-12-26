@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # root 'static_pages#home'
   scope "(:locale)", locale: /en|nh/ do
+    get '/delete/:id', to: 'admin#block', as: 'delete'
     get '/admin', to: 'admin#index'
     root 'static_pages#home'
     get '/signup', to: 'users#new'
