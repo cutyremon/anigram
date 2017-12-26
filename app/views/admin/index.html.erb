@@ -1,4 +1,5 @@
 <h1>Admin</h1>
+<<<<<<< c00914a28247b6ce04ffd9aa930b2f26977c5de2
 <% will_paginate @users, id: "will_paginate_id" %>
 <% @users.each do |user| %>
   <% if user.admin? == false %>
@@ -35,6 +36,7 @@
     <% end %>
   <% end %>
 <% end %>
+<% end %>
 <% will_paginate @users %>
 <script>
     $('#will_paginate_id').bind('click', function (event) {
@@ -46,3 +48,6 @@
         $('#loading').html('Loading');
     });
 </script>
+=======
+</div>
+>>>>>>> word
