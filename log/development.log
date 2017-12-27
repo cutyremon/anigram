@@ -24878,3 +24878,131 @@ app/views/admin/index.html.erb:2:in `_app_views_admin_index_html_erb___382874471
   Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.6ms)
+Started GET "/" for 127.0.0.1 at 2017-12-27 08:33:00 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (31.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/Desktop/anigram/app/controllers/application_controller.rb:2)
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1250.4ms)
+  Rendered layouts/_rails_default.html.erb (12907.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+Completed 200 OK in 14325ms (Views: 14267.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-27 08:33:25 +0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The @admin variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    1: <h1>Admin</h1>
+    2: <%= will_paginate %>
+    3: <% @users.each do |user| %>
+    4:   <% if user.admin? == false %>
+    5:     <div class="container">
+  
+app/views/admin/index.html.erb:2:in `_app_views_admin_index_html_erb__1609030244383441326_70291020194180'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+Started GET "/admin" for 127.0.0.1 at 2017-12-27 08:40:54 +0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (33.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  Rendered admin/index.html.erb within layouts/application (99.6ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 52.0ms)
+
+
+  
+ActionView::Template::Error (The @admin variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    35:     <% end %>
+    36:   <% end %>
+    37: <% end %>
+    38: <%= will_paginate %>
+    39: <script>
+    40:     $('#will_paginate_id').bind('click', function (event) {
+    41: 
+  
+app/views/admin/index.html.erb:38:in `_app_views_admin_index_html_erb__1609030244383441326_70291008438660'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.6ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.7ms)
+Started GET "/admin" for 127.0.0.1 at 2017-12-27 08:41:08 +0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  Rendered admin/index.html.erb within layouts/application (22.1ms)
+  Rendered layouts/_rails_default.html.erb (403.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 461ms (Views: 457.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-27 08:42:55 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/Desktop/anigram/app/controllers/application_controller.rb:2)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  Rendered admin/index.html.erb within layouts/application (2368.8ms)
+  Rendered layouts/_rails_default.html.erb (1629.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (7.2ms)
+Completed 200 OK in 4073ms (Views: 4021.2ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/admin?page=2" for 127.0.0.1 at 2017-12-27 08:44:17 +0700
+Processing by AdminController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 5[0m
+  Rendered admin/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_rails_default.html.erb (280.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 306ms (Views: 303.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin?page=1" for 127.0.0.1 at 2017-12-27 08:44:30 +0700
+Processing by AdminController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  Rendered admin/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_rails_default.html.erb (282.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 304ms (Views: 302.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin?page=2" for 127.0.0.1 at 2017-12-27 08:44:34 +0700
+Processing by AdminController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 5[0m
+  Rendered admin/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_rails_default.html.erb (272.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 295ms (Views: 292.4ms | ActiveRecord: 0.5ms)
+
+
