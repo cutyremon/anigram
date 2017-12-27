@@ -12,13 +12,8 @@
   <%= render 'shared/setting_post', micropost: micropost %>
 </div>
 <div class="content">
-  <div class="image-content">
-    <%= image_tag micropost.picture.url if micropost.picture? %>
-  </div>
-  <div class="number-like" id="number-like-<%= micropost.id %>"><%= micropost.likes.count %> <%= "like".pluralize(micropost.likes.count) %></div>
   <div class="micropost-content">
     <% if micropost.content.length != 0 %>
-      <%= link_to micropost.user.name, micropost.user %>
       <div class="text-content">
         <%= micropost.content %>
       </div>
@@ -29,13 +24,19 @@
       <% end %>
     </div>
   </div>
+  <div class="image-content" style="text-align: center">
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+  </div>
+  <div class="number-like" id="number-like-<%= micropost.id %>">
+    <%= render 'microposts/like_form', micropost: micropost %>
+    <%= micropost.likes.count %> <%= "like".pluralize(micropost.likes.count) %>
+  </div>
 </div>
 <div class="comment-section">
   <div class="comments-list">
     <%= render 'microposts/comments_list', micropost: micropost %>
   </div>
   <div class="comment-form">
-    <%= render 'microposts/like_form', micropost: micropost %>
     <%= render 'microposts/comment_form', micropost: micropost %>
   </div>
 </div>
