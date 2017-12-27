@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   # root 'static_pages#home'
   scope "(:locale)", locale: /en|nh/ do
     root 'static_pages#home'
+    # get 'index',to: 'static_pages#home'
     get '/signup', to: 'users#new'
     post '/signup', to: 'users#create' # named routes
-    get '/login', to: 'sessions#new'
+    get '/login', to: 'sessions#new' ,as: "login"
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'
     get '/index', to: 'users#index'

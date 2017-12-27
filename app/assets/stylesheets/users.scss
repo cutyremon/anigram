@@ -379,10 +379,9 @@
 			}
 		}
 		.list-users{
-			float: right;
-			text-align: center;
-			width: calc(100% - 450px);
-			display: inline-block;
+          text-align: center;
+          width: calc(100% - 450px);
+          margin: auto;
 			.container{
 				text-align: left;
 				padding-top: 0;
@@ -453,16 +452,15 @@
 							}
 						}
 						.follow-btn{
-							background-color: #3897f0;
+							background-color: red;
 							&:hover{
 								color: white;
 							}
 						}
 						.unfollow-btn{
-							background-color: white;
-							color: #7b7b7b;
+							background-color: rebeccapurple;
 							&:hover{
-								color: #7b7b7b;
+								color: #white;
 							}
 						}
 					}

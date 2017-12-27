@@ -2,13 +2,13 @@
 	<% @like = Like.where("user_id = ? and micropost_id = ?", current_user.id, micropost.id).first %>
 	<div id="micropost-like-<%= micropost.id %>">
 		<%= link_to like_path(id: @like.id), method: :delete, remote: true do %>
-			<%= fa_icon "heart" %>
+			<%= fa_icon "thumbs-up" %>
 		<% end %>
 	</div>
 <% else %>
 	<div id="micropost-like-<%= micropost.id %>">
 		<%= link_to likes_path(micropost_id: micropost.id), method: :post, remote: true do %>
-			<%= fa_icon "heart-o" %>
+			<%= fa_icon "thumbs-o-up" %>
 		<% end %>
 	</div>
 <% end %>
