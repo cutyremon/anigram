@@ -1,0 +1,53 @@
+<h1>Admin</h1>
+<<<<<<< c00914a28247b6ce04ffd9aa930b2f26977c5de2
+<% will_paginate @users, id: "will_paginate_id" %>
+<% @users.each do |user| %>
+  <% if user.admin? == false %>
+    <div class="container">
+      <ul>
+        <li>
+          <div class="user">
+            <div class="avatar">
+              <% if user.avatar? %>
+                <%= link_to image_tag(user.avatar.url(:thumb_small), style: "height: 123px;"), user %>
+              <% else %>
+                <% if user.gender == "Male" %>
+                  <%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg"), style: "height: 123px;"), user %>
+                <% else %>
+                  <%= link_to image_tag(user.avatar.default_url("ava-default-female.png"), style: "height: 123px;"), user %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="user-info">
+              <div class="name"><%= link_to user.name, user %></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <% if user.block == 0 %>
+      <div>
+        <%= link_to "block", delete_path(user), style: "color:green" %>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to "unblock", delete_path(user), style: "color:red" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+<% end %>
+<% will_paginate @users %>
+<script>
+    $('#will_paginate_id').bind('click', function (event) {
+
+        window.scrollTo(0, 0);
+
+// Some code to show loader on screen
+
+        $('#loading').html('Loading');
+    });
+</script>
+=======
+</div>
+>>>>>>> word

@@ -1,0 +1,87 @@
+<% provide(:title, "Edit user") %>
+
+<div class="edit-profile">
+	<div class="left-block-edit">
+		<%= form_for(@user) do |f| %>
+			<div class="propic-edit">
+				<% if @user.avatar? %>
+					<%= image_tag @user.avatar.url, id: "avatar" %>
+				<% else %>
+					<% if @user.gender == "Male" %>
+						<%= image_tag @user.avatar.default_url("ava-default-male.jpg"), id: "avatar" %>
+					<% else %>
+						<%= image_tag @user.avatar.default_url("ava-default-female.png"), id: "avatar" %>
+					<% end %>
+				<% end %>
+				<%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png",    id: "upload-pic" %>
+				<a class="upload-new-pic" href="#">
+					<i class="fa fa-camera" aria-hidden="true"></i>Update Avatar
+				</a>
+			</div>
+
+			<br><br>
+	</div>
+	<div class="right-block-edit">
+    <h3>Change Your Info</h3>
+    <div class="name-edit">
+      <% if @user.errors[:name].length != 0%>
+        <div class="error-messages"><%= @user.errors[:name][0] %></div>
+      <% end %>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="email-edit">
+      <% if @user.errors[:email].length != 0%>
+        <div class="error-messages"><%= @user.errors[:email][0] %></div>
+      <% end %>
+      <%= f.label :email, "Email" %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="gender-edit" style="margin-bottom: 3%">
+      <%= f.radio_button :gender, "Male", checked: @user.gender == "Male",
+                         id: "male-radio" %>
+      <%= f.label :gender, "Male", for: "male-radio",class:"lb-gen" %>
+      <%= f.radio_button :gender, "Female", checked: @user.gender == "Female",
+                         id: "female-radio" %>
+      <%= f.label :gender, "Female", for: "female-radio",class:"lb-gen" %>
+    </div>
+      <%= f.submit "Click Me To Update", class: "btn btn-success" %>
+    <% end %>
+		<h3 style="margin-top: 5%">Change Your Password</h3>
+		<%= form_for(@user) do |f| %>
+			<% if @user.errors[:password].length != 0%>
+				<div class="error-messages"><%= @user.errors[:password][0] %></div>
+			<% end %>
+			<%= f.label :password, "Enter New Password" %>
+			<%= f.password_field :password, class: "form-control" %>
+		
+			<% if @user.errors[:password_confirmation].length != 0%>
+				<div class="error-messages"><%= @user.errors[:password_confirmation][0] %></div>
+			<% end %>
+			<%= f.label :password_confirmation, "Confirm New Password" %>
+			<%= f.password_field :password_confirmation, class: "form-control" %>
+			<p style="margin-bottom: 5%;"></p>
+			<%= f.submit "Change Password", class: "btn btn-warning" %>
+		<% end %>
+	</div>
+</div>
+<script type="text/javascript">
+	function readURL(input){
+		if(input.files && input.files[0]){
+			var reader = new FileReader();
+
+			reader.onload = function(e){
+				$("#avatar")
+					.attr("src", e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+	$("a.upload-new-pic").on("click",function(e){
+		e.preventDefault();
+		$("#upload-pic:hidden").trigger("click");
+	});
+	$("#upload-pic:hidden").change(function(){
+		readURL(this);
+	});
+</script>

@@ -1,0 +1,54 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo"><%= fa_icon "pinterest" %> Pinterekt
+      <% t("Pinterekt") %></a>
+    <div style="float: right;margin-right: 10%;width: 8%;margin-top: -4px;">
+      <a>
+        <%= link_to "English", locale: "en" %>
+      </a>
+      <strong>/</strong>
+      <a>
+        <%= link_to "日本語", locale: "nh" %>
+      </a>
+    </div>
+    <% if logged_in? %>
+      <%= form_tag users_path, method: "get", class: "users-search" do %>
+        <%= text_field_tag :search, params[:search], placeholder: t("Search") %>
+      <% end %>
+    <% end %>
+    <ul id="nav-mobile" class="right hide-on-med-and-down" style="position: absolute;right: 0px;">
+      <% if logged_in? %>
+        <li class="dropdown">
+          <a href="#" charset="dropdown-toggle" data-toggle="dropdown">
+            <% count = 0 %>
+            <% current_user.notifications.each do |notification| %>
+              <% if !notification.read %>
+                <% count += 1 %>
+              <% end %>
+            <% end %>
+              <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+          </a>
+          <ul class="dropdown-menu notifi-dropdown">
+            <li>Notifications</li>
+            <%= render current_user.notifications.order('id DESC').first(3) %>
+            <li>
+              <%= link_to t("view all"), notifications_path %>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" charset="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </a>
+          <ul class="dropdown-menu profile-dropdown">
+            <li>
+            <%= link_to "Profile", user_path(current_user) %>
+            </li>
+            <li><%= link_to t("Log out"), logout_path, method: "delete" %></li>
+          </ul>
+        </li>
+
+      <% end %>
+    </ul>
+  </div>
+</nav>
