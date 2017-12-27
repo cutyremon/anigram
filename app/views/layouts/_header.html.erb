@@ -26,11 +26,7 @@
                 <% count += 1 %>
               <% end %>
             <% end %>
-            <% if count == 0 %>
               <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-            <% else %>
-              <span class="glyphicon glyphicon-bell" style="color: #fa3e3e;" aria-hidden="true"></span>
-            <% end %>
           </a>
           <ul class="dropdown-menu notifi-dropdown">
             <li>Notifications</li>
@@ -44,9 +40,9 @@
           <a href="#" charset="dropdown-toggle" data-toggle="dropdown">
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
           </a>
-          <ul class="dropdown-menu notifi-dropdown">
-            <li>Profile
-            <%= link_to current_user %>
+          <ul class="dropdown-menu profile-dropdown">
+            <li>
+            <%= link_to "Profile", user_path(current_user) %>
             </li>
             <li><%= link_to t("Log out"), logout_path, method: "delete" %></li>
           </ul>

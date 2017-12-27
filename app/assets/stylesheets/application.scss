@@ -325,9 +325,9 @@ nav{
 		}
 	}
 	.notifi-dropdown{
-		min-width: 430px;
-		left: -280px;
-		padding: 0;
+      width: 876%;
+      left: -681%;
+      padding: 0;
 		li{
 			a{
 				padding: 0;
@@ -580,4 +580,21 @@ textarea{
 
 #post1{
   margin-top: 5px;
+}
+
+.micropost .content .number-like{
+  padding: 0 !important;
+}
+
+.form-control{
+  font-size: 1em !important;
+}
+
+.lb-gen{
+  font-size: 1em !important;
+}
+
+.profile-dropdown{
+  left: -91%;
+  width: 185%;
 }
