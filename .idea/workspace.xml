@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6d3e0f0-fd7b-40cd-b433-002f549c637f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/micropost/picture/7/img-default.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/micropost/picture/7/thumb_img-default.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/b.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/ezgif.com-video-to-gif.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_b.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_ezgif.com-video-to-gif.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_small_b.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_small_ezgif.com-video-to-gif.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_super_small_b.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/uploads/user/avatar/15/thumb_super_small_ezgif.com-video-to-gif.gif" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/icon.png" afterPath="$PROJECT_DIR$/app/assets/images/icon.png" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/notifications.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/notifications.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/microposts/_micropost_content.html.erb" afterPath="$PROJECT_DIR$/app/views/microposts/_micropost_content.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/notifications/index.html.erb" afterPath="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/micropost/picture/5/ava-default-female.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/micropost/picture/5/thumb_ava-default-female.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -42,11 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -83,6 +71,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -248,12 +237,12 @@
       <updated>1514340872025</updated>
       <workItem from="1514340873222" duration="11000" />
       <workItem from="1514340952120" duration="8000" />
-      <workItem from="1514340987941" duration="4864000" />
+      <workItem from="1514340987941" duration="5571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4883000" />
+    <option name="totallyTimeSpent" value="5590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="7" width="1368" height="780" extended-state="6" />
@@ -316,14 +305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.text.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -728,6 +709,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
       </provider>

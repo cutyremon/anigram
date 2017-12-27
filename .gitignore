@@ -15,6 +15,14 @@ rerun.txt
 pickle-email-*.html
 .idea/*
 /.idea/*
+.idea/.generators
+.idea/.rakeTasks
+.idea/workspace.xml
+.idea/anigram.iml
+.idea/inspectionProfiles
+.idea/modules.xml
+.idea/vcs.xml
+.idea/misc.xml
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
