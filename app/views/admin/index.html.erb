@@ -1,5 +1,5 @@
 <h1>Admin</h1>
-<%= will_paginate %>
+<% will_paginate @users, id: "will_paginate_id" %>
 <% @users.each do |user| %>
   <% if user.admin? == false %>
     <div class="container">
@@ -35,4 +35,14 @@
     <% end %>
   <% end %>
 <% end %>
-<%= will_paginate %>
+<% will_paginate @users %>
+<script>
+    $('#will_paginate_id').bind('click', function (event) {
+
+        window.scrollTo(0, 0);
+
+// Some code to show loader on screen
+
+        $('#loading').html('Loading');
+    });
+</script>
