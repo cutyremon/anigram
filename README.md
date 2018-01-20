@@ -12,20 +12,28 @@
 
 #status:はじめました：5.12.2017--続いている。。
 
-#役割：leader. 
+#役割：leader.
 
 #-ajax,paginate,login facebook, i18n,support 構成員 （能く”back end”)
 
 #setup: 
 
--gem update
+--sudo apt-get update
 
--bundle install
+#install mysql
 
--rails db:create
+--sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 
--rails db:migrate 
+#setup file config/database.yml :setup:root,setup:password of mysql
 
--rails db:seed 
+--gem update
 
--rails s..
+--bundle install
+
+--rails db:create
+
+--rails db:migrate 
+
+--rails db:seed 
+
+--rails s..
