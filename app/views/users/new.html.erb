@@ -1,41 +1,35 @@
-<div id="login-box">
+<div id="login-box" style="height: 431px;">
 	<div class="left-block">
-		<h1>Sign up</h1>
+		<h1><%= t("Sign up") %></h1>
 		<%= form_for(@user, url: signup_path) do |f| %>
 			<% if @user.errors[:name].length != 0 %>
 				<div class="error-messages"><%= @user.errors[:name][0] %></div>
 			<% end %>
-			<%= f.text_field :name, placeholder: "Harry Potter 90", class: "form-control" %>
+			<%= f.text_field :name, placeholder: "johncena", class: "form-control" %>
 
 			<% if @user.errors[:email].length != 0 %>
 				<div class="error-messages"><%= @user.errors[:email][0] %></div>
 			<% end %>
-			<%= f.email_field :email, placeholder: "harry@gmail.com", class: "form-control" %>
+			<%= f.email_field :email, placeholder: "johncena@gmail.com", class: "form-control" %>
 
 			<% if @user.errors[:password].length != 0 %>
 				<div class="error-messages"><%= @user.errors[:password][0] %></div>
 			<% end %>
-			<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+			<%= f.password_field :password, placeholder: t("Password"), class: "form-control" %>
 
 			<% if @user.errors[:password_confirmation].length != 0 %>
 				<div class="error-messages"><%= @user.errors[:password_confirmation][0] %></div>
 			<% end %>
-			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "form-control" %>
+			<%= f.password_field :password_confirmation, placeholder: t("Password Confirmation"), class: "form-control" %>
 
 			<%= f.radio_button :gender, "Male", checked: true, id: "male-radio" %>
-			<%= f.label :gender, "Male", for: "male-radio" %>
+			<%= f.label :gender, t("Male"), for: "male-radio" %>
 			<%= f.radio_button :gender, "Female", checked: false, id: "female-radio" %>
-			<%= f.label :gender, "Female", for: "female-radio" %>
+			<%= f.label :gender, t("Female"), for: "female-radio" %>
 			<br>
-			<%= f.submit "Enjoy With Us !" %>
+			<%= f.submit t("Enjoy With Us") %>
 		<% end %>
 		<br>
-		<p>Already had account? <%= link_to "Let's go", login_path %></p>
+    <p><%=t("Already had account")%> <%= link_to t("Lets go"), login_path %></p>
 	</div>
-	<div class="right-block">
-		<span class="login-with">Sign in with<br>social network</span>
-		<button class="social-signin facebook">Log in with facebook</button>
-		<button class="social-signin google">Log in with Google+</button>
-	</div>
-	<div class="or">OR</div>
 </div>

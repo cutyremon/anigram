@@ -1,38 +1,67 @@
-<h1>Admin</h1>
-<%= will_paginate %>
+<div class="container-fluid">
+  <h1 style="margin-bottom: 2%">Admin</h1>
+  <h1 style="margin-left: 44%;margin-bottom: 5%">User List</h1>
+  <div style="margin-left: 19%">
 <% @users.each do |user| %>
   <% if user.admin? == false %>
-    <div class="container">
-      <ul>
-        <li>
-          <div class="user">
-            <div class="avatar">
-              <% if user.avatar? %>
-                <%= link_to image_tag(user.avatar.url(:thumb_small), style: "height: 123px;"), user %>
+    <% if user.gender == "Male" %>
+      <div class="col-md-3 row user">
+        <div class="user">
+          <div class="avatar">
+            <% if user.avatar? %>
+              <%= link_to image_tag(user.avatar.url(:thumb_small), style: "height: 123px;"), user %>
+            <% else %>
+              <% if user.gender == "Male" %>
+                <%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg"), style: "height: 123px;"), user %>
               <% else %>
-                <% if user.gender == "Male" %>
-                  <%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg"), style: "height: 123px;"), user %>
-                <% else %>
-                  <%= link_to image_tag(user.avatar.default_url("ava-default-female.png"), style: "height: 123px;"), user %>
-                <% end %>
+                <%= link_to image_tag(user.avatar.default_url("ava-default-female.png"), style: "height: 123px;"), user %>
               <% end %>
-            </div>
-            <div class="user-info">
-              <div class="name"><%= link_to user.name, user %></div>
-            </div>
+            <% end %>
           </div>
-        </li>
-      </ul>
-    </div>
-    <% if user.block == 0 %>
-      <div>
-        <%= link_to "block", delete_path(user), style: "color:green" %>
+          <div class="user-info">
+            <div class="name"><%= link_to user.name, user %></div>
+          </div>
+        </div>
+        <% if user.block == 0 %>
+          <div>
+            <%= link_to "block", delete_path(user), style: "color:green" %>
+          </div>
+        <% else %>
+          <div>
+            <%= link_to "unblock", delete_path(user), style: "color:red" %>
+          </div>
+        <% end %>
       </div>
     <% else %>
-      <div>
-        <%= link_to "unblock", delete_path(user), style: "color:red" %>
+      <div class="col-md-3 row user">
+        <div class="user">
+          <div class="avatar">
+            <% if user.avatar? %>
+              <%= link_to image_tag(user.avatar.url(:thumb_small), style: "height: 123px;"), user %>
+            <% else %>
+              <% if user.gender == "Male" %>
+                <%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg"), style: "height: 123px;"), user %>
+              <% else %>
+                <%= link_to image_tag(user.avatar.default_url("ava-default-female.png"), style: "height: 123px;"), user %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="user-info">
+            <div class="name"><%= link_to user.name, user %></div>
+          </div>
+        </div>
+        <% if user.block == 0 %>
+          <div>
+            <%= link_to "block", delete_path(user), style: "color:green" %>
+          </div>
+        <% else %>
+          <div>
+            <%= link_to "unblock", delete_path(user), style: "color:red" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   <% end %>
 <% end %>
-<%= will_paginate %>
+</div>
+</div>

@@ -1,6 +1,15 @@
 class AdminController < ApplicationController
   def index
-    @users = User.all().paginate(page: params[:page], per_page: 5)
+    if logged_in?
+      if current_user.admin?
+        @users = User.all()
+      else
+        redirect_to user_path(current_user)
+      end
+    else
+      redirect_to root_path
+
+    end
   end
 
   def block
@@ -19,3 +28,4 @@ class AdminController < ApplicationController
     end
   end
 end
+

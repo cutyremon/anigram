@@ -17,16 +17,16 @@
 				<br>
 				<div class="info-detail">
 					<div class="number-post">
-						<strong><%= user.microposts.count %></strong> 
-						<%= "Post".pluralize(user.microposts.count) %>
+						<strong><%= user.microposts.count %></strong>
+            <%= t("Post") %>
 					</div>
 					<div class="number-follower number-follower-<%= user.id %>">
-						<strong><%= user.followers.count %></strong> 
-						<%= "Follower".pluralize(user.followers.count) %>
+						<strong><%= user.followers.count %></strong>
+            <%= t("Followers") %>
 					</div>
 					<div class="number-following number-following-<%= user.id %>">
-						<strong><%= user.following.count %></strong> 
-						<%= "Following".pluralize(user.following.count) %>
+						<strong><%= user.following.count %></strong>
+            <%= t("Following") %>
 					</div>
 				</div>
 			</div>

@@ -12,13 +12,8 @@
   <%= render 'shared/setting_post', micropost: micropost %>
 </div>
 <div class="content">
-  <div class="image-content">
-    <%= image_tag micropost.picture.url if micropost.picture? %>
-  </div>
-  <div class="number-like" id="number-like-<%= micropost.id %>"><%= micropost.likes.count %> <%= "like".pluralize(micropost.likes.count) %></div>
   <div class="micropost-content">
     <% if micropost.content.length != 0 %>
-      <%= link_to micropost.user.name, micropost.user %>
       <div class="text-content">
         <%= micropost.content %>
       </div>
@@ -29,13 +24,23 @@
       <% end %>
     </div>
   </div>
+  <div class="image-content" style="text-align: center;width:100%;margin-bottom: 15px;margin-top: 15px;">
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+  </div>
+  <div style="float: left;margin: 0 10px 0 20px;font-size: 25px;">
+    <%= render 'microposts/like_form', micropost: micropost %>
+  </div>
+  <div class="number-like" id="number-like-<%= micropost.id %>" style="float: left;margin-top: 8px;">
+    <%= micropost.likes.count %> <%= t("Like") %>
+  </div>
 </div>
 <div class="comment-section">
   <div class="comments-list">
+    <!--<%= render 'microposts/like_form', micropost: micropost %>-->
     <%= render 'microposts/comments_list', micropost: micropost %>
   </div>
   <div class="comment-form">
-    <%= render 'microposts/like_form', micropost: micropost %>
+
     <%= render 'microposts/comment_form', micropost: micropost %>
   </div>
 </div>

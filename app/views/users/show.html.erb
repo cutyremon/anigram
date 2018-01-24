@@ -18,9 +18,9 @@
 		<div class="col-xs-8">
 			<div class="name-express">
 				<div class="name"><%= @user.name %></div>
-				<div class="config- area">
+				<div class="config- area" style="width: 300px">
 					<% if current_user?(@user) %>
-						<%= link_to "Edit Profile", edit_user_path(current_user), id: "edit-profile-btn" %>
+						<%= link_to t("Edit Profile"), edit_user_path(current_user), id: "edit-profile-btn" %>
 					<% else %>
 						<% if @user.admin? == false %>
 							<%= render 'follow_form' if logged_in? %>
@@ -30,26 +30,29 @@
 			</div>
 			<div class="user-info-express">
 				<div class="number number-post">
-					<strong><%= @user.microposts.count %></strong> 
-					<%= "Post".pluralize(@user.microposts.count) %>
+					<strong><%= @user.microposts.count %></strong>
+          <%= t("Post") %>
 				</div>
 				<div class="number number-follower number-follower-<%= @user.id %>">
 					<a href="#followers-modal" data-toggle="modal" data-target="#followers-modal">
-						<strong><%= @user.followers.count %></strong> 
-						<%= "Follower".pluralize(@user.followers.count) %>
+						<strong><%= @user.followers.count %></strong>
+            <%= t("Followers") %>
 					</a>
 				</div>
 				<div class="number number-following number-following-<%= @user.id %>">
 					<a href="#following-modal" data-toggle="modal" data-target="#following-modal">
-						<strong><%= @user.following.count %></strong> 
-						<%= "Following".pluralize(@user.following.count) %>
+						<strong><%= @user.following.count %></strong>
+            <%= t("Following") %>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<br><br>
 	<% if @microposts.any? %>
+    <div style="width: 80%;margin: auto;border-bottom: 1px solid lightgray;text-align: center;margin-bottom: 20px;">
+      <h1><%= t("My Post") %></h1>
+    </div>
+
 		<% @microposts.each_with_index do |micropost, index| %>
 			<% if index % 3 == 0 %>
 				<div class="row pic-row">
@@ -79,7 +82,7 @@
 				<div class="quote">
 					Start capturing and sharing your moments.
 					<br>Connecting people.
-					<div class="branding-name">Anigram</div>
+					<div class="branding-name">Pinterekt</div>
 				</div>
 			</div>
 		</div>

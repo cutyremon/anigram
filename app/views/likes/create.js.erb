@@ -3,7 +3,7 @@
 $("div#micropost-like-<%= @micropost.id %>").html(
 	"<a data-remote='true' rel='nofollow'"
 	+ "data-method='delete' href='/likes/<%= @like.id %>'>"
-	+ "<i class='fa fa-heart'></i>"
+	+ "<i class='fa fa-thumbs-up'></i>"
 	+ "</a>"
 	);
 $("#number-like-<%= @micropost.id %>")

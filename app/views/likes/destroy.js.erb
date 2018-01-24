@@ -1,7 +1,7 @@
 $("div#micropost-like-<%= @micropost.id %>").html(
 	"<a data-remote='true' rel='nofollow'"
 	+ "data-method='post' href='/likes?micropost_id=<%= @micropost.id %>'>"
-	+ "<i class='fa fa-heart-o'></i>"
+	+ "<i class='fa fa-thumbs-o-up'></i>"
 	+ "</a>"
 	);
 $("div#number-like-<%= @micropost.id %>")

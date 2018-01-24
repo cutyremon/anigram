@@ -227,14 +227,13 @@ $shadowColor: #bbbbbb;
 		float: left;
 		.post-form{
 			background-color: white;
-			height: 475px;
 			width: 260px;
 			border-radius: 3px;
 			box-shadow: 0 1px 1px 2px #efefef;
 			.base-info{
 				position: relative;
 				.cover{
-					background-color: #073b40;
+					background-color: rebeccapurple;
 					height: 120px;
 					width: 100%;
 					border-top-right-radius: 3px;
@@ -405,7 +404,7 @@ $shadowColor: #bbbbbb;
 						font-size: 1.1em;
 						.image-content{
 							img{
-								width: 100%;
+								width: auto;
 							}
 						}
 						.number-like{

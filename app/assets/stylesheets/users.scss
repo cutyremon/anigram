@@ -30,7 +30,7 @@
 		font-size: 1.1em;
 	}
 	.left-block-edit{
-		width: 35%;
+		width: 30%;
 		height: 100%;
 		display: inline-block;
 		float: left;
@@ -179,7 +179,6 @@
 			font-size: 2.1em;
 			max-width: 320px;
 			word-wrap: break-word;
-			float: left;
 		}
 		.config-area{
 			display: inline-block;
@@ -379,10 +378,9 @@
 			}
 		}
 		.list-users{
-			float: right;
-			text-align: center;
-			width: calc(100% - 450px);
-			display: inline-block;
+          text-align: center;
+          width: calc(100% - 450px);
+          margin: auto;
 			.container{
 				text-align: left;
 				padding-top: 0;
@@ -453,16 +451,15 @@
 							}
 						}
 						.follow-btn{
-							background-color: #3897f0;
+							background-color: red;
 							&:hover{
 								color: white;
 							}
 						}
 						.unfollow-btn{
-							background-color: white;
-							color: #7b7b7b;
+							background-color: rebeccapurple;
 							&:hover{
-								color: #7b7b7b;
+								color: #white;
 							}
 						}
 					}

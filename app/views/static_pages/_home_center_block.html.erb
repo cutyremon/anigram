@@ -1,5 +1,18 @@
 <div class="center-block-content">
-	<div class="feed-post">
+  <%if current_user.block==0 %>
+  <div class="post-form" style="margin-bottom: 20px">
+    <div class="form">
+      <%= render 'shared/micropost_form' %>
+    </div>
+  </div>
+    <%else%>
+  <h3 style="color: red">You Has Been Blocked</h3>
+    <%end%>
+
+  <div class="feed-post">
 		<%= render 'shared/feed' %>
 	</div>
 </div>
+<script>
+
+</script>

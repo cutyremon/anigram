@@ -325,9 +325,9 @@ nav{
 		}
 	}
 	.notifi-dropdown{
-		min-width: 430px;
-		left: -280px;
-		padding: 0;
+      width: 876%;
+      left: -681%;
+      padding: 0;
 		li{
 			a{
 				padding: 0;
@@ -394,19 +394,19 @@ footer.page-footer{
 }
 
 #login-box {
-	position: relative;
-	margin: 40px auto 5% auto;
-	width: 650px;
-	height: 500px;
-	background: #ffffff;
-	border-radius: 2px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+  position: relative;
+  margin: 40px auto 5% auto;
+  width: 42%;
+  height: 390px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 .left-block {
-	position: absolute;
+  margin: auto;
 	top: 0;
 	left: 0;
 	box-sizing: border-box;
@@ -545,4 +545,60 @@ footer.page-footer{
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 	line-height: 40px;
 	text-align: center;
+}
+
+nav .nav-wrapper{
+  background: red;
+}
+
+.users-search{
+  width: 40%;
+  margin-left: 28%;
+  float: left;
+}
+
+.btn-primary1 {
+  color: #fff;
+  background-color: red;
+}
+
+.btn-primary1:hover {
+  color: #fff;
+  background-color: rebeccapurple;
+}
+
+#search{
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+
+}
+
+textarea{
+  resize: none;
+}
+
+#post1{
+  margin-top: 5px;
+}
+
+.micropost .content .number-like{
+  padding: 0 !important;
+}
+
+.form-control{
+  font-size: 1em !important;
+}
+
+.lb-gen{
+  font-size: 1em !important;
+}
+
+.profile-dropdown{
+  left: -91%;
+  width: 185%;
+}
+
+.user img{
+  width: 123px;
 }

@@ -17,20 +17,17 @@
 				<div class="name"><%= link_to current_user.name, current_user %></div>
 				<div class="follow-info">
 					<div class="number-follower-<%= current_user.id %> follower">
-						<%= "Follower".pluralize(current_user.followers.count) %>
+            <%= t("Followers") %>
 						<br>
-						<strong><%= current_user.followers.count %></strong> 
+						<strong><%= current_user.followers.count %></strong>
 					</div>
 					<div class="number-following-<%= current_user.id %> following">
-						<%= "Following".pluralize(current_user.following.count) %>
+            <%= t("Following") %>
 						<br>
-						<strong><%= current_user.following.count %></strong> 
+						<strong><%= current_user.following.count %></strong>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form">
-			<%= render 'shared/micropost_form' %>
 		</div>
 	</div>
 </div>

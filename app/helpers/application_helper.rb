@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def full_title page_title = ''
-		base_title = "Anigram"
+		base_title = "Pinterekt"
 		if page_title.empty?
 			base_title
 		else
@@ -14,7 +14,7 @@ module ApplicationHelper
 				"select id from users where id != #{current_user.id} 
 				and id not in (select followed_id from relationships 
 				where follower_id = #{current_user.id}) 
-				and id != 1 limit 3")
+				and id != 1 limit 5")
 		end
 	end
 end
