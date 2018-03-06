@@ -16,5 +16,6 @@ module AniGram
     config.time_zone = 'Asia/Bangkok'
     config.i18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb, yml}')]
     config.i18n.default_locale = :en
+    Koala.config.api_version = 'v2.0'
   end
 end

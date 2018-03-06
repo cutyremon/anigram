@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       end
     end
 
+    match "/auth/:provider/callback", to: "sessions#create", via: :get
     resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
     resources :users
