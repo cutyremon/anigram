@@ -21,13 +21,14 @@ Rails.application.routes.draw do
       end
     end
 
-    match "/auth/:provider/callback", to: "sessions#create", via: :get
+    get "/auth/:provider/callback" => 'sessions#create'
     resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
     resources :users
     resources :microposts, only: [:create, :destroy, :show]
     resources :relationships, only: [:create, :destroy]
     # devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
+
   end
   devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
 end

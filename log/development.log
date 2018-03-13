@@ -32831,3 +32831,1366 @@ config/routes.rb:1:in `<top (required)>'
   Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (327.3ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 16:57:14 +0700
+  
+NameError (uninitialized constant AvatarUploader::Cloudinary):
+  
+app/uploaders/avatar_uploader.rb:4:in `<class:AvatarUploader>'
+app/uploaders/avatar_uploader.rb:3:in `<top (required)>'
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:32:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 16:57:49 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (112.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/_home_left_block.html.erb (43.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (56.0ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 21.3ms)
+
+
+  
+ActionView::Template::Error (Version thumb_small doesn't exist!):
+    4: 			<div class="cover"></div>
+    5: 			<div class="avatar">
+    6: 				<% if current_user.avatar? %>
+    7: 					<%= link_to image_tag(current_user.avatar.url(:thumb_small)), current_user %>
+    8: 				<% else %>
+    9: 					<% if current_user.gender == "Male" %>
+   10: 						<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+  
+app/views/static_pages/_home_left_block.html.erb:7:in `_app_views_static_pages__home_left_block_html_erb___302786649197202825_47056840276100'
+app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3752581742600332138_47056840839780'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.7ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:00:21 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/_home_left_block.html.erb (13.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (Version thumb_small doesn't exist!):
+    4: 			<div class="cover"></div>
+    5: 			<div class="avatar">
+    6: 				<% if current_user.avatar? %>
+    7: 					<%= link_to cl_image_upload_tag(current_user.avatar.url(:thumb_small)), current_user %>
+    8: 				<% else %>
+    9: 					<% if current_user.gender == "Male" %>
+   10: 						<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+  
+app/views/static_pages/_home_left_block.html.erb:7:in `_app_views_static_pages__home_left_block_html_erb___302786649197202825_47056840234700'
+app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3752581742600332138_47056840836040'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:02:43 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/_home_left_block.html.erb (1.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (Version image_id doesn't exist!):
+    4: 			<div class="cover"></div>
+    5: 			<div class="avatar">
+    6: 				<% if current_user.avatar? %>
+    7: 					<%= link_to cl_image_upload_tag(current_user.avatar.url(:image_id)), current_user %>
+    8: 				<% else %>
+    9: 					<% if current_user.gender == "Male" %>
+   10: 						<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+  
+app/views/static_pages/_home_left_block.html.erb:7:in `_app_views_static_pages__home_left_block_html_erb___302786649197202825_47056832628500'
+app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3752581742600332138_47056832759380'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:03:47 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/_home_left_block.html.erb (2.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Version avatar doesn't exist!):
+    4: 			<div class="cover"></div>
+    5: 			<div class="avatar">
+    6: 				<% if current_user.avatar? %>
+    7: 					<%= link_to cl_image_upload_tag(current_user.avatar.url(:avatar)), current_user %>
+    8: 				<% else %>
+    9: 					<% if current_user.gender == "Male" %>
+   10: 						<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+  
+app/views/static_pages/_home_left_block.html.erb:7:in `_app_views_static_pages__home_left_block_html_erb___302786649197202825_47056832090800'
+app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3752581742600332138_47056832252900'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:04:06 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (66.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered static_pages/_home_left_block.html.erb (1430.1ms)
+  Rendered shared/_micropost_form.html.erb (48.0ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+						WHERE follower_id = 9)
+						OR user_id = 9)[0m
+  Rendered shared/_feed.html.erb (2.6ms)
+  Rendered static_pages/_home_center_block.html.erb (54.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mselect id from users where id != 9 
+				and id not in (select followed_id from relationships 
+				where follower_id = 9) 
+				and id != 1 limit 5[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  Rendered static_pages/_home_right_block.html.erb (6.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (1524.0ms)
+Completed 500 Internal Server Error in 1531ms (ActiveRecord: 69.4ms)
+
+
+  
+ActionView::Template::Error (Version thumb_super_small doesn't exist!):
+    16: 				<div class="user-suggest">
+    17: 					<div class="avatar">
+    18: 						<% if @user.avatar? %>
+    19: 							<%= link_to image_tag(@user.avatar.url(:thumb_super_small)), @user %>
+    20: 						<% else %>
+    21: 							<% if @user.gender == "Male" %>
+    22: 								<%= link_to image_tag(@user.avatar.default_url("ava-default-male.jpg")),     @user %>
+  
+app/views/static_pages/_home_right_block.html.erb:19:in `block in _app_views_static_pages__home_right_block_html_erb___190682171880605772_69817718488700'
+app/views/static_pages/_home_right_block.html.erb:14:in `each'
+app/views/static_pages/_home_right_block.html.erb:14:in `_app_views_static_pages__home_right_block_html_erb___190682171880605772_69817718488700'
+app/views/static_pages/home.html.erb:4:in `_app_views_static_pages_home_html_erb___3752581742600332138_47056826437560'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:04:43 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered static_pages/_home_left_block.html.erb (10.0ms)
+  Rendered shared/_micropost_form.html.erb (2.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+						WHERE follower_id = 9)
+						OR user_id = 9)[0m
+  Rendered shared/_feed.html.erb (2.5ms)
+  Rendered static_pages/_home_center_block.html.erb (7.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mselect id from users where id != 9 
+				and id not in (select followed_id from relationships 
+				where follower_id = 9) 
+				and id != 1 limit 5[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 8 LIMIT 1[0m
+  Rendered users/_follow.html.erb (14.1ms)
+  Rendered users/_follow_form.html.erb (67.7ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 3 LIMIT 1[0m
+  Rendered users/_follow.html.erb (1.9ms)
+  Rendered users/_follow_form.html.erb (7.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 2 LIMIT 1[0m
+  Rendered users/_follow.html.erb (1.8ms)
+  Rendered users/_follow_form.html.erb (8.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 5 LIMIT 1[0m
+  Rendered users/_follow.html.erb (1.9ms)
+  Rendered users/_follow_form.html.erb (9.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 6 LIMIT 1[0m
+  Rendered users/_follow.html.erb (3.2ms)
+  Rendered users/_follow_form.html.erb (8.0ms)
+  Rendered static_pages/_home_right_block.html.erb (150.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (171.6ms)
+  Rendered layouts/_rails_default.html.erb (22102.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mNotification Load (15.7ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (24.8ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (138.2ms)
+Completed 200 OK in 22533ms (Views: 22417.2ms | ActiveRecord: 109.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/fallback/ava-default-male"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/fallback/ava-default-male"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-13 17:05:30 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (86.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (39.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered static_pages/_home_left_block.html.erb (49.0ms)
+  Rendered shared/_micropost_form.html.erb (2.6ms)
+  [1m[35m (38.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+						WHERE follower_id = 9)
+						OR user_id = 9)[0m
+  Rendered shared/_feed.html.erb (40.3ms)
+  Rendered static_pages/_home_center_block.html.erb (65.8ms)
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mselect id from users where id != 9 
+				and id not in (select followed_id from relationships 
+				where follower_id = 9) 
+				and id != 1 limit 5[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 8 LIMIT 1[0m
+  Rendered users/_follow.html.erb (2.2ms)
+  Rendered users/_follow_form.html.erb (6.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 3 LIMIT 1[0m
+  Rendered users/_follow.html.erb (1.0ms)
+  Rendered users/_follow_form.html.erb (3.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 2 LIMIT 1[0m
+  Rendered users/_follow.html.erb (1.1ms)
+  Rendered users/_follow_form.html.erb (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 5 LIMIT 1[0m
+  Rendered users/_follow.html.erb (0.9ms)
+  Rendered users/_follow_form.html.erb (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9 AND `users`.`id` = 6 LIMIT 1[0m
+  Rendered users/_follow.html.erb (0.9ms)
+  Rendered users/_follow_form.html.erb (2.7ms)
+  Rendered static_pages/_home_right_block.html.erb (48.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (208.2ms)
+  Rendered layouts/_rails_default.html.erb (381.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mNotification Load (0.9ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (8.5ms)
+Completed 200 OK in 755ms (Views: 543.5ms | ActiveRecord: 185.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/fallback/ava-default-male"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/fallback/ava-default-male"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 17:05:41 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Version thumb doesn't exist!):
+     5: 		<div class="col-xs-4">
+     6: 			<div class="avatar">
+     7: 				<% if @user.avatar? %>
+     8: 					<%= image_tag @user.avatar.url(:thumb) %>
+     9: 				<% else %>
+    10: 					<% if @user.gender == "Male" %>
+    11: 						<%= image_tag @user.avatar.default_url("ava-default-male.jpg") %>
+  
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb__4543519316055100939_69817222633080'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/fallback/ava-default-male"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 17:07:21 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (16.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m
+  [1m[35m (29.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  [1m[36mMicropost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  [1m[36mMicropost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  Rendered users/_popup_post.html.erb (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered shared/_show_following.html.erb (4.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  Rendered shared/_show_followers.html.erb (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4102.4ms)
+  Rendered layouts/_rails_default.html.erb (3338.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (30.2ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (47.8ms)
+Completed 200 OK in 10025ms (Views: 7431.0ms | ActiveRecord: 666.5ms)
+
+
+Started GET "/en/users/9/edit" for 127.0.0.1 at 2018-03-13 17:07:41 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (444.0ms)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007eff5c22e2c0>:0x007eff619c0c40>
+Did you mean?  fork):
+    16: 				<%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png",    id: "upload-pic" %>
+    17: 				<a class="upload-new-pic" href="#">
+    18: 					<i class="fa fa-camera" aria-hidden="true"></i><%= t("Update Avatar") %>
+    19:           <%= form.file_field :avatar, multiple: true %>
+    20:         </a>
+    21: 			</div>
+    22: 
+  
+app/views/users/edit.html.erb:19:in `block in _app_views_users_edit_html_erb___791826670692703382_69817659690080'
+app/views/users/edit.html.erb:5:in `_app_views_users_edit_html_erb___791826670692703382_69817659690080'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.8ms)
+Started GET "/en/users/9/edit" for 127.0.0.1 at 2018-03-13 17:08:09 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_rails_default.html.erb (320.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mNotification Load (0.6ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (7.3ms)
+Completed 200 OK in 397ms (Views: 371.9ms | ActiveRecord: 20.5ms)
+
+
+Started PATCH "/en/users/9" for 127.0.0.1 at 2018-03-13 17:08:32 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLHr+1FUswPaJs0kkVcrthPBzTh8rx92UgvqTn0C04yUclH3mKxY4N0nZ+nwZQ765fo/vlkW8Y/C9+w7OILk2g==", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007eff2ec8ae40 @tempfile=#<Tempfile:/tmp/RackMultipart20180313-5092-1wwlu3p.jpg>, @original_filename="27845819_957524234410060_1760911185_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"27845819_957524234410060_1760911185_o.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Đông Ngọc", "email"=>"nguyenngocdongfa@gmail.com", "gender"=>"Female"}, "commit"=>"Update", "locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (20.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (18.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'nguyenngocdongfa@gmail.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (136.0ms)[0m  [1m[33mUPDATE `users` SET `gender` = 'Female', `avatar` = '27845819_957524234410060_1760911185_o.jpg', `updated_at` = '2018-03-13 10:08:35' WHERE `users`.`id` = 9[0m
+  [1m[35m (211.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/en/users/9
+Completed 302 Found in 3350ms (ActiveRecord: 486.0ms)
+
+
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 17:08:35 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  [1m[36mMicropost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  [1m[36mMicropost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  Rendered users/_popup_post.html.erb (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered shared/_show_following.html.erb (2.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  Rendered shared/_show_followers.html.erb (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_rails_default.html.erb (225.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (11.3ms)
+Completed 200 OK in 322ms (Views: 270.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/en/users/9/edit" for 127.0.0.1 at 2018-03-13 17:09:45 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_rails_default.html.erb (255.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 280ms (Views: 273.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/nh/users/9/edit" for 127.0.0.1 at 2018-03-13 17:10:16 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"nh", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (70.4ms)
+  Rendered layouts/_rails_default.html.erb (238.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+Completed 200 OK in 326ms (Views: 319.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/nh/users/9/edit" for 127.0.0.1 at 2018-03-13 17:29:11 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"nh", "id"=>"9"}
+  [1m[36mUser Load (441.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (21.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (85.4ms)
+  Rendered layouts/_rails_default.html.erb (3434.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mNotification Load (96.6ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (23.1ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (124.6ms)
+Completed 200 OK in 4313ms (Views: 3600.5ms | ActiveRecord: 582.5ms)
+
+
+Started GET "/en/users/9/edit" for 127.0.0.1 at 2018-03-13 17:29:20 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_rails_default.html.erb (235.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.3ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 253ms (Views: 248.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 17:29:23 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  [1m[36mMicropost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  [1m[36mMicropost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  Rendered users/_popup_post.html.erb (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered shared/_show_following.html.erb (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  Rendered shared/_show_followers.html.erb (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (80.5ms)
+  Rendered layouts/_rails_default.html.erb (244.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.3ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 356ms (Views: 319.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 17:29:28 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  [1m[36mMicropost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  [1m[36mMicropost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  Rendered users/_popup_post.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered shared/_show_following.html.erb (2.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  Rendered shared/_show_followers.html.erb (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_rails_default.html.erb (331.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 364ms (Views: 356.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 17:30:00 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (360.2ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (989.6ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1486.3ms)
+Started GET "/auth/google_oauth" for 127.0.0.1 at 2018-03-13 17:31:07 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (12.5ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.9ms)
+Started GET "/auth/google_oauth" for 127.0.0.1 at 2018-03-13 17:45:15 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (63.6ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.9ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 17:45:19 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (10.2ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.8ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 17:51:34 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (65.6ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (33.2ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (175.9ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:04:55 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (11.3ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.2ms)
+Started GET "/en/users/9" for 127.0.0.1 at 2018-03-13 18:05:01 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/cutyremon/anigram/anigramv0/app/controllers/application_controller.rb:2)
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"9"}
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+ActsAsTaggableOn.delimiter is deprecated and will be removed from v4.0+, use  a ActsAsTaggableOn.default_parser instead
+
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  [1m[36mMicropost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  [1m[36mMicropost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 9 LIMIT 1[0m
+  Rendered users/_popup_post.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 9[0m
+  Rendered shared/_show_following.html.erb (3.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 9[0m
+  Rendered shared/_show_followers.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 9[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (103.4ms)
+  Rendered layouts/_rails_default.html.erb (2069.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9[0m
+  [1m[36mNotification Load (12.0ms)[0m  [1m[34mSELECT  `notifications`.* FROM `notifications` WHERE `notifications`.`user_id` = 9 ORDER BY id DESC LIMIT 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered layouts/_header.html.erb (25.2ms)
+Completed 200 OK in 2925ms (Views: 2140.3ms | ActiveRecord: 698.8ms)
+
+
+Started DELETE "/en/logout" for 127.0.0.1 at 2018-03-13 18:05:08 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S5OVoR8syJyH5qqFdNy4A0ZyDhxLUJOA0oFTKcCImltXUC+t1tQjf4DnAEgV7p1PsEn8mm7pfXlCfVVchQitDQ==", "locale"=>"en"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2018-03-13 18:05:08 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+Redirected to http://localhost:3000/en/login
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/en/login" for 127.0.0.1 at 2018-03-13 18:05:08 +0700
+Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (48.2ms)
+  Rendered layouts/_rails_default.html.erb (256.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 316ms (Views: 314.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:05:11 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (10.1ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.6ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:10:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (66.0ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (32.9ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.6ms)
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:11:31 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (10.0ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.3ms)
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:14:27 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (10.1ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:14:28 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (9.6ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:14:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (9.6ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.7ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:15:44 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (9.1ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:15:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (9.7ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (23.3ms)[0m  [1m[34mSELECT GET_LOCK('3745684652249084055', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (228.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (71.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('3745684652249084055')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (4.3ms)[0m  [1m[35mSHOW CREATE TABLE `comments`[0m
+  [1m[35m (12.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'comments'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `likes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `microposts`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'microposts'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `notifications`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'notifications'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `relationships`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `taggings`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'taggings'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-13 18:43:18 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (31.7ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/cutyremon/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.3ms)
