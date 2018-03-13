@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'font-awesome-rails'
+gem "font-awesome-rails"
 gem 'materialize-sass'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt', '3.1.11'
@@ -67,7 +67,3 @@ gem 'omniauth'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'rails-i18n', '~> 5.0.0'
-gem 'koala', '~> 1.10.0rc'
-gem 'google-api-client'
-gem "omniauth-google-oauth2", "~> 0.2.1"
-gem 'cloudinary'
