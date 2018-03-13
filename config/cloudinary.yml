@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: anigram
+  api_key: '267311161226913'
+  api_secret: 3wNzVbaV0kIjZJnRU6TnBrV83FA
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: anigram
+  api_key: '267311161226913'
+  api_secret: 3wNzVbaV0kIjZJnRU6TnBrV83FA
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: anigram
+  api_key: '267311161226913'
+  api_secret: 3wNzVbaV0kIjZJnRU6TnBrV83FA
+  enhance_image_tag: true
+  static_image_support: false

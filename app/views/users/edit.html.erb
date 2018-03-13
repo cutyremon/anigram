@@ -16,7 +16,8 @@
 				<%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png",    id: "upload-pic" %>
 				<a class="upload-new-pic" href="#">
 					<i class="fa fa-camera" aria-hidden="true"></i><%= t("Update Avatar") %>
-				</a>
+          <%= form.file_field :avatar, multiple: true %>
+        </a>
 			</div>
 
 			<br><br>

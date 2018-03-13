@@ -52,6 +52,9 @@ class User < ApplicationRecord
       user
     end
   end
+  def facebook
+    @facebook ||= koala::facebook::API.new(oauth_token)
+  end
 
   # Returns a random token.
   def self.new_token

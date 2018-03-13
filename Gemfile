@@ -68,6 +68,6 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'koala', '~> 1.10.0rc'
-gem 'google-api-client', :require => 'google/api_client'
-gem 'omniauth'
+gem 'google-api-client'
 gem 'omniauth-google-oauth2'
+gem "cloudinary"
