@@ -5,12 +5,16 @@
 		<%= form_for(@user) do |f| %>
 			<div class="propic-edit">
 				<% if @user.avatar? %>
-					<%= image_tag @user.avatar.url, id: "avatar" %>
+					<%= link_to image_tag(@user.avatar.url(:thumb_small)), @user %>
 				<% else %>
-					<% if @user.gender == "Male" %>
-						<%= image_tag @user.avatar.default_url("ava-default-male.jpg"), id: "avatar" %>
+					<% if @user.piture?%>
+					<%= link_to image_tag(@user.piture), @user %>
 					<% else %>
-						<%= image_tag @user.avatar.default_url("ava-default-female.png"), id: "avatar" %>
+							<% if @user.gender == "Male" %>
+								<%= link_to image_tag(@user.avatar.default_url("ava-default-male.jpg")), @user %>
+							<% else %>
+								<%= link_to image_tag(@user.avatar.default_url("ava-default-female.png")), @user %>
+							<% end %>
 					<% end %>
 				<% end %>
 				<%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png",    id: "upload-pic" %>

@@ -6,11 +6,16 @@
 				<% if current_user.avatar? %>
 					<%= link_to image_tag(current_user.avatar.url(:thumb_small)), current_user %>
 				<% else %>
-					<% if current_user.gender == "Male" %>
-						<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+					<% if current_user.piture?%>
+					<%= link_to image_tag(current_user.piture), current_user %>
 					<% else %>
-						<%= link_to image_tag(current_user.avatar.default_url("ava-default-female.png")), current_user %>
+							<% if current_user.gender == "Male" %>
+								<%= link_to image_tag(current_user.avatar.default_url("ava-default-male.jpg")), current_user %>
+							<% else %>
+								<%= link_to image_tag(current_user.avatar.default_url("ava-default-female.png")), current_user %>
+							<% end %>
 					<% end %>
+
 				<% end %>
 			</div>
 			<div class="info">

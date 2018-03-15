@@ -5,10 +5,14 @@
 				<% if user.avatar? %>
 					<%= link_to image_tag(user.avatar.url(:thumb_small)), user %>
 				<% else %>
-					<% if user.gender == "Male" %>
-						<%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg")), user %>
+					<% if user.piture? %>
+					<%= link_to image_tag(user.piture.url), user %>
 					<% else %>
-						<%= link_to image_tag(user.avatar.default_url("ava-default-female.png")), user %>
+							<% if user.gender == "Male" %>
+								<%= link_to image_tag(user.avatar.default_url("ava-default-male.jpg")), user %>
+							<% else %>
+								<%= link_to image_tag(user.avatar.default_url("ava-default-female.png")), user %>
+							<% end %>
 					<% end %>
 				<% end %>
 			</div>
@@ -37,8 +41,11 @@
 				<% end %>
 			</div>
 		</div>
-	</div>
-	 <img src="#{{user.piture}}" alt="Smiley face" height="42" width="42"> 
+	</div class="row">
+	echo{"hehe"}
+	 <%= link_to image_tag(user.picture) %>
+	}
+	}
 		
 	</div>
 <% end %>
