@@ -4,7 +4,7 @@
 
 #写真をけいさいする、しょひょうする、見送る 
 
-#特別：i18n,login facebook.
+#特別：i18n,login google.
 
 #install: ruby , ruby on rails . mysql 
 
