@@ -14,7 +14,7 @@ class MicropostsController < ApplicationController
 	end
 
 	def show
-		@micropost = Micropost.find_by(id: params[:id])
+	   @micropost = Micropost.find_by(id: params[:id])
 	end
 
 	def destroy

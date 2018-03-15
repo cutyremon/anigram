@@ -16,6 +16,15 @@ class SessionsController < ApplicationController
 			render 'new'
 		end
 	end
+	def creategoogle
+  	 @user = User.find_or_create_from_auth_hash(request.env["omniauth.auth"])
+  	if @user.save
+      log_in @user
+      redirect_to @user
+    else
+      render 'new'
+    end
+	end
 
 	def destroy
 		log_out if logged_in?

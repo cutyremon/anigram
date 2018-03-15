@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token # create accessible attribute remember_token
-  devise :omniauthable, :omniauth_providers => [:facebook]
+  attr_accessor :remember_token # create accessible attribute remember_toke
   before_save {self.email.downcase!}
   validates :name, presence: true, length: {maximum: 50}
   VALIDATE_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -53,6 +52,19 @@ class User < ApplicationRecord
       user
     end
   end
+  def self.find_or_create_from_auth_hash(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      # user.first_name = auth.info.first_name
+      user.name = auth.info.last_name + auth.info.first_name
+      user.email = auth.info.email
+      user.piture = auth.info.image
+      user.avatar = auth.info.image
+      user.password="123456"
+      user.save!
+    end
+end
 
   # Returns a random token.
   def self.new_token
