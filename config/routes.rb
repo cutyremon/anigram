@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get '/notification/:id/link_through', to: 'notifications#link_through',
         as: :link_through
     get '/notifications', to: 'notifications#index'
+    get '/me', to: 'me#create'
     resources :users do
       member do
         get :following, :followers

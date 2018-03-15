@@ -1,10 +1,10 @@
 <div id="login-box">
   <div class="left-block">
-    <h1>Sign in</h1>
+    <h1><%= t("Sign in")%></h1>
     <%= form_for(:session, url: login_path) do |f| %>
       <%= f.email_field :email, placeholder: "JohnCena@gmail.com", class: "form-control" %>
 
-      <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+      <%= f.password_field :password, placeholder: t("Password"), class: "form-control" %>
 
       <% if @error != "" %>
         <p class="error-messages"><%= @error %></p>
@@ -16,7 +16,10 @@
       <%= f.submit t("Lets Go") %>
     <% end %>
     <br><br>
-    <a href="/auth/google_oauth2">sigin with google</a>
+    <a href="/auth/google_oauth2"><%= t("sigin with google") %></a>
+    <br>
+    <a href="/auth/facebook"><%= t("sigin with facebook") %></a>
+
     <p>New Users? <%= link_to t("Lets Join With Us"), signup_path %></p>
   </div>
 </div>
