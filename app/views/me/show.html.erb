@@ -1,0 +1,26 @@
+<% @friends.each do |user_id| %>
+				<% @user = User.find_by(id: user_id.id)%>
+				<div class="user-suggest">
+					<div class="avatar">
+						<% if @user.avatar? %>
+					<%= link_to image_tag(@user.avatar.url(:thumb_small)), @user %>
+				<% else %>
+					<% if @user.piture?%>
+					<%= link_to image_tag(@user.piture), @user %>
+					<% else %>
+							<% if @user.gender == "Male" %>
+								<%= link_to image_tag(@user.avatar.default_url("ava-default-male.jpg")), @user %>
+							<% else %>
+								<%= link_to image_tag(@user.avatar.default_url("ava-default-female.png")), @user %>
+							<% end %>
+					<% end %>
+				<% end %>
+					</div>
+					<div class="info">
+						<div class="name"><%= link_to @user.name, @user %></div>
+						<br>
+						<%= render 'users/follow_form' %>
+					</div>
+				</div>
+			<% end %>
+<% end %>

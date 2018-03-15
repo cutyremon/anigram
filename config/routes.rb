@@ -20,7 +20,7 @@ Rails.application.routes.draw do
         get :following, :followers
       end
     end
-    get 'auth/:provider/callback', to: 'sessions#creategoogle',via: :get
+    get 'auth/facebook/callback', to: 'sessions#createfacebook',via: :get
     get '/auth/google_oauth2/callback', to: 'sessions#creategoogle'
     resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]

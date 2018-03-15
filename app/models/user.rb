@@ -38,35 +38,31 @@ class User < ApplicationRecord
       end
     end
   end
-
-  def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      # user.email = auth.info.name << "@gmail.com"
-      # user.email = auth.info.name.concat("@gmail.com")
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0, 20]
-
-      user.name = auth.info.name # assuming the user model has a name
-      user.avatar = auth.info.image # assuming the user model has an image
-      user.save!
-      user
-    end
-  end
-  def self.find_or_create_from_auth_hash(auth)
+ def self.find_or_create_from_auth_hash_facebook(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      # user.first_name = auth.info.first_name
-      user.name = auth.info.last_name + auth.info.first_name
+      user.name = auth.info.last_name + " " +  auth.info.first_name
       user.email = auth.info.email
       user.piture = auth.info.image
       user.avatar = auth.info.image
       user.password="123456"
       user.save!
     end
-end
+  end
 
-  # Returns a random token.
+  def self.find_or_create_from_auth_hash(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.last_name + " " +  auth.info.first_name
+      user.email = auth.info.email
+      user.piture = auth.info.image
+      user.avatar = auth.info.image
+      user.password="123456"
+      user.save!
+    end
+  end
   def self.new_token
     SecureRandom.urlsafe_base64
   end
