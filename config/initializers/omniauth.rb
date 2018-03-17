@@ -1,4 +1,4 @@
-OmniAuth.config.logger = Rails.logger
+  OmniAuth.config.logger = Rails.logger
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google_oauth2, '58722265137-6j5blbu4c9pv0htg16gdkqv9dbrdsn64.apps.googleusercontent.com','EYcL7Yk362R9XlPrhseFGqi3', 
@@ -10,7 +10,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
             }
    provider :facebook, 
             '143047686356730',
-             '1ec76810cb993475472ee72c802b22eb',
+            '7e797f2c37f2ef319e254461086a58f1',
               scope: 'public_profile, email',
                info_fields: 'id,first_name,middle_name,last_name,email,name,link,picture'
 

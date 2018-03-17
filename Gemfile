@@ -69,3 +69,4 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'rails-i18n', '~> 5.0.0'
 gem "koala"
+gem "figaro"

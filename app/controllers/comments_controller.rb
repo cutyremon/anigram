@@ -28,8 +28,8 @@ class CommentsController < ApplicationController
 
 	private
 		def create_notification micropost, comment
-			return if micropost.user.id == current_user.id
-			Notification.create(user_id: micropost.user.id,
+				return if micropost.user.id == current_user.id
+				Notification.create(user_id: micropost.user.id,
 								notified_by_id: current_user.id,
 								micropost_id: micropost.id,
 								comment_id: comment.id,

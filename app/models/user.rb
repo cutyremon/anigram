@@ -63,16 +63,6 @@ class User < ApplicationRecord
       user.save!
     end
   end
-  def self.fbfriends
-     @graph = Koala::Facebook::API.new(oauth_token)
-        begin
-          @fbfriends = @graph.get_connections("me", "friends", fields: "id")
-          @uids = @fbfriends.map{ |v| v.values }.flatten
-        rescue Koala::Facebook::AuthenticationError => e
-          redirect_to '/auth/facebook'
-        end
-          @friends = User.where(uid: @uids)
-    end
   def self.new_token
     SecureRandom.urlsafe_base64
   end
@@ -116,7 +106,6 @@ class User < ApplicationRecord
   def follow other_user
     active_relationships.create(followed_id: other_user.id)
   end
-
   # Unfollow a user
   def unfollow other_user
     following.delete(other_user)

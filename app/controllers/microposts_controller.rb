@@ -5,6 +5,7 @@ class MicropostsController < ApplicationController
 	def create
 		@micropost = current_user.microposts.build(micropost_params)
 		if @micropost.save
+			ExampleMailer.sample_email(current_user).deliver
 			redirect_to root_url
 		else
 			@feed_items = []
